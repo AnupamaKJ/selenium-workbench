@@ -1,14 +1,16 @@
 package com.selenium.learning.TestNGTesting;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Day4 {
-	
+	@Parameters({"URL"})
 	@Test
-	public void WebLoginHomeLoan()
+	public void WebLoginHomeLoan(String urlname)
 	{
 		//selenium
-		System.out.println("WebLoginHome");
+		System.out.println("WebLoginHomePersonalLoan");
+		System.out.println(urlname);
 	}
 	
 	@Test(groups= {"Smoke"})

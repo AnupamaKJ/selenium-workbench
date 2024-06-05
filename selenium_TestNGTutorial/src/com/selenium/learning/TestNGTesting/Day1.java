@@ -1,5 +1,6 @@
 package com.selenium.learning.TestNGTesting;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,6 +20,7 @@ public class Day1 {
 	public void Demo()
 	{
 		System.out.println("Hello");
+		Assert.assertTrue(false);
 	}
 	
 	@AfterSuite

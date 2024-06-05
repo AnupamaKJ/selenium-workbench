@@ -64,3 +64,18 @@ From the testNG docs: alwaysRun For before methods (beforeSuite, beforeTest, bef
 	@Test (enabled=false) for skipping test cases from execution
 	
 	@Test(timeOut=4000)for waiting a method
+	
+<parameter name="URL" value = "qaclickacadamy.com"/>
+
+Test level parameterization and suite level parameterization  
+
+Ex: 	@Parameters({"URL", "URLName"})  
+	@Test  
+	public void WebLoginCarLoan(String urlname, String key)  
+	{  
+		//selenium  
+		System.out.println("WebLoginCar");  
+		System.out.println(urlname); 
+		System.out.println(key);  
+	}  
+	

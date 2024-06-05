@@ -5,6 +5,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Day3 {
@@ -21,11 +23,15 @@ public class Day3 {
 		System.out.println("After executing any methods in the class");
 	}
 	
+	@Parameters({"URL", "APIkey/userName"})
 	@Test
-	public void WebLoginCarLoan()
+	public void WebLoginCarLoan(String urlname, String key)
 	{
 		//selenium
 		System.out.println("WebLoginCar");
+		System.out.println(urlname);
+		System.out.println(key);
+		
 	}
 	
 	@Test(groups= {"Smoke"})
@@ -40,12 +46,7 @@ public class Day3 {
 		//appium
 		System.out.println("MobilesigninCar");
 	}
-	@Test(timeOut=4000)
-	public void MobilesignoutCarLoan()
-	{
-		//appium
-		System.out.println("Mobile Signout Car");
-	}
+
 	
 	@BeforeMethod(alwaysRun=true)
 	public void bfMethod()
@@ -64,11 +65,38 @@ public class Day3 {
 	{
 		System.out.println("I am number 1");
 	}
+	@Test(dataProvider="getData")
+	public void MobilesignoutCarLoan(String userName, String password)
+	{
+		//appium
+		System.out.println("Mobile Signout Car");
+		System.out.println(userName +" "+ password);
+		
+	}
 	
 	@Test(dependsOnMethods= {"WebLoginCarLoan","MobilesignoutCarLoan"})
 	public void APICarLoan()
 	{
 		//Rest API
 		System.out.println("APILoginCar");
+	}
+	
+	@DataProvider
+	public Object[][] getData()
+	{
+		//1st combination -username  password -- good credit history
+		//2nd combination -username  password -- no credit history
+		//3rd combination -username  password -- fraudelent credit history
+		
+		Object[][] data = new Object[3][2];
+		data[0][0]="FirstSetUserName";
+		data[0][1]="Firstpassword";
+		data[1][0]="SecondSetUserName";
+		data[1][1]="secondpassword";
+		data[2][0]="thirdSetUserName";
+		data[2][1]="thirdpassword";
+		return data;
+		
+				
 	}
 }
