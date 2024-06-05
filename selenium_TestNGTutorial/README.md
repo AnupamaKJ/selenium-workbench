@@ -79,3 +79,56 @@ Ex: 	@Parameters({"URL", "URLName"})
 		System.out.println(key);  
 	}  
 	
+#### Listeners ####
+Create a new class file as "Listeners" --> public class Listeners implements ITestListener   
+Right click on the file --> Source --> Override/Implement methods --> Select all first options and save
+
+in the XML file add the path as below --> below the suite and test  
+
+<suite name="Loan department">  
+<listeners>  
+<listener class-name="com.selenium.learning.TestNGTesting.Listeners"/>  
+</listeners>  
+<test name="Personal Loan">  
+  
+####Parallel Execution####
+ It will executes the tests parallely under the suite  
+suite name="Loan department" parallel="tests" thread-count="2"
+
+ It will executes the tests parallely under the Tests   
+test name="Personal Loan" parallel="classes" thread-count="2"
+
+#### Results File ####
+refresh the page and Click on the output file  
+
+select index.html file --> open in the folder location  
+
+We will come to the know about the results. 
+
+
+#### Inheritance ####
+Copy the values from the parent class to the child class using extends class
+
+--> public class ChildClass extends ParentClass 
+
+public class ChildClass extends ParentClass  {
+	
+	@Test
+	public void testRunExtends()
+	{
+			doThis();
+	}
+
+}
+
+--> With out using extends, we need to use object method
+public class ChildClass  {
+
+	@Test
+	public void testRun()
+	{
+		ParentClass pc = new ParentClass();
+		pc.doThis();
+	}
+
+}

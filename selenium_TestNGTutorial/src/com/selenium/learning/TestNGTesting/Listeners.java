@@ -21,7 +21,7 @@ public class Listeners implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		System.out.println("I filed excuted listners Pass code");
+		System.out.println("I filed excuted listners Pass code : " + result.getName());
 	}
 
 	@Override
