@@ -13,31 +13,26 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import com.selenium.learning.pageObjects.LandingPage;
-import com.selenium.learning.pageObjects.ProductCatalog;
-
-public class StandaloneTest {
+public class SubmitOrderTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		
 		String productName="ZARA COAT 3";
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://rahulshettyacademy.com/client");
 		
-		LandingPage landingPage = new LandingPage(driver);
-		landingPage.goTo();
-		landingPage.loginApplication("anupamakj@gmail.com", "Anupama@1214");
+		driver.findElement(By.id("userEmail")).sendKeys("anupamakj@gmail.com");
+		driver.findElement(By.id("userPassword")).sendKeys("Anupama@1214");
 		
-
+		driver.findElement(By.id("login")).click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		
 		driver.manage().window().maximize();
 		
-		ProductCatalog productCatalog = new ProductCatalog(driver); 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));
 		
-		List<WebElement> products = productCatalog.getProductList();
-		
-		
+		List<WebElement> products =driver.findElements(By.cssSelector(".mb-3"));
 		WebElement prod = products.stream().filter(product -> 
 		product.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null);
 		System.out.println(prod);
