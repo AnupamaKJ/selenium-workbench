@@ -33,10 +33,11 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 	
-	public void waitForElementToDisapper(WebElement ele)
+	public void waitForElementToDisapper() throws InterruptedException
 	{	
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.invisibilityOf(ele));
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		//wait.until(ExpectedConditions.invisibilityOf(ele));
+		Thread.sleep(1000);
 	}
 	
 	public void scrollDown()
