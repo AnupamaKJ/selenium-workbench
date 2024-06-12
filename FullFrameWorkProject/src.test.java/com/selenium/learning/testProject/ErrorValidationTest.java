@@ -20,7 +20,7 @@ import com.selenium.learning.testComponents.BaseTest;
 
 public class ErrorValidationTest extends BaseTest{
 
-	@Test
+	@Test(groups= {"ErrorHandling"})
 	public void LoginErrorValidation() throws IOException, InterruptedException {
 				
 		landingPage.loginApplication("anupamakj@gmail.com", "Anupama1214");
