@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Submit Order Test">
+<suite parallel="tests" name="Suite">
+  <test thread-count="1" name="Submit Order Test">
     <classes>
       <class name="com.selenium.learning.testProject.SubmitOrderTest"/>
         </classes>
    </test> <!-- Test -->
    
-   <test thread-count="5" name="Error Validation Test">
+   <test parallel="methods" thread-count="1" name="Error Validation Test">
 	 <classes>   
       	<class name="com.selenium.learning.testProject.ErrorValidationTest"/>
   	  </classes>
