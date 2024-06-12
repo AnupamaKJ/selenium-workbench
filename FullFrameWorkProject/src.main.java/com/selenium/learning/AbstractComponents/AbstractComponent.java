@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.selenium.learning.pageObjects.CartPage;
+import com.selenium.learning.pageObjects.OrderPage;
 
 public class AbstractComponent {
 	
@@ -25,7 +26,9 @@ public class AbstractComponent {
 	
 	@FindBy(css="[routerlink*='cart']")
 	WebElement cartHeader;
-
+	
+	@FindBy(css="[routerlink*='myorders']")
+	WebElement orderHeader;
 
 	public void waitForTheElementToAppear(By findBy)
 	{	
@@ -60,6 +63,13 @@ public class AbstractComponent {
 		cartHeader.click();
 		CartPage cartPage = new CartPage(driver);
 		return cartPage;
+	}
+	
+	public OrderPage goToOrdersPage()
+	{
+		orderHeader.click();
+		return new OrderPage(driver);
+		 
 	}
 
 }

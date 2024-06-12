@@ -15,15 +15,17 @@ import com.selenium.learning.pageObjects.CartPage;
 import com.selenium.learning.pageObjects.CheckOutPage;
 import com.selenium.learning.pageObjects.ConfirmationPage;
 import com.selenium.learning.pageObjects.LandingPage;
+import com.selenium.learning.pageObjects.OrderPage;
 import com.selenium.learning.pageObjects.ProductCatalog;
 import com.selenium.learning.testComponents.BaseTest;
 
 public class SubmitOrderTest extends BaseTest{
 
+	String productName="ZARA COAT 3";
 	@Test
 	public void submitOrder() throws IOException, InterruptedException {
 		
-		String productName="ZARA COAT 3";
+
 		String country = "india";
 				
 		ProductCatalog productCatalog = landingPage.loginApplication("anupamakj@gmail.com", "Anupama@1214");
@@ -45,4 +47,14 @@ public class SubmitOrderTest extends BaseTest{
 		
 	}
 
+	//to verify Zara cote 3 is displayed in order
+	@Test(dependsOnMethods= {"submitOrder"})
+	public void OderHistoryTest()
+	{
+		//Zara Cote 3
+		ProductCatalog productCatalog = landingPage.loginApplication("anupamakj@gmail.com", "Anupama@1214");
+		OrderPage orderPage = productCatalog.goToOrdersPage();
+		Assert.assertTrue(orderPage.VerifyOrderDisplay(productName));
+	}
+	
 }
