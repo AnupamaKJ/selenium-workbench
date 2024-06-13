@@ -1,10 +1,14 @@
 package com.selenium.learning.testProject;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -59,6 +63,15 @@ public class SubmitOrderTest extends BaseTest{
 		ProductCatalog productCatalog = landingPage.loginApplication("anupamakj@gmail.com", "Anupama@1214");
 		OrderPage orderPage = productCatalog.goToOrdersPage();
 		Assert.assertTrue(orderPage.VerifyOrderDisplay(productName));
+	}
+	
+	public String getScreenShot(String testCaseName) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir")+"\\reports\\"+testCaseName+".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir")+"\\reports\\"+testCaseName+ ".png";
 	}
 	
 	@DataProvider
