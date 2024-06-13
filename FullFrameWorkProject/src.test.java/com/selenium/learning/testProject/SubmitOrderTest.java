@@ -62,21 +62,10 @@ public class SubmitOrderTest extends BaseTest{
 	}
 	
 	@DataProvider
-	public Object[][] getData()
+	public Object[][] getData() throws IOException
 	{
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("email","anupamakj@gmail.com");
-		map.put("password", "Anupama@1214");
-		map.put("productName", "ZARA COAT 3");
-		
-		HashMap<String, String> map1 = new HashMap<String, String>();
-		map1.put("email","anupama@gmail.com");
-		map1.put("password", "Anupama@1214");
-		map1.put("productName", "ADIDAS ORIGINAL");
-		
-		
-		return new Object[][] { {map}, {map1}};
-		
+		List<HashMap<String, String>> data =  getJsonDataToMap(System.getProperty("user.dir")+"\\src.test.java\\com\\selenium\\learning\\data\\PurchaseOrder.jason");
+		return new Object[][] { {data.get(0)}, {data.get(1)}};
 	}
 	
 	/*
@@ -86,4 +75,17 @@ public class SubmitOrderTest extends BaseTest{
 		return new Object[][] {{"anupamakj@gmail.com", "Anupama@1214","ZARA COAT 3"}, {"anupama@gmail.com", "Anupama@1214","ADIDAS ORIGINAL"}};
 	}
 	*/
+	
+	/*
+	HashMap<String, String> map = new HashMap<String, String>();
+	map.put("email","anupamakj@gmail.com");
+	map.put("password", "Anupama@1214");
+	map.put("productName", "ZARA COAT 3");
+	
+	HashMap<String, String> map1 = new HashMap<String, String>();
+	map1.put("email","anupama@gmail.com");
+	map1.put("password", "Anupama@1214");
+	map1.put("productName", "ADIDAS ORIGINAL");
+	
+	return new Object[][] { {map}, {map1}}; */
 }
