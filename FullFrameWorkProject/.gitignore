@@ -3,3 +3,6 @@
 
 # ignore all outputFiles files 
 /test-output/
+
+# ignore all reports files 
+/reports/
