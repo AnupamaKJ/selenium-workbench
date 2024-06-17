@@ -32,7 +32,7 @@ public class Listeners extends BaseTest implements ITestListener{
 		test.fail(result.getThrowable());
 		
 		try {
-			driver = (WebDriver)result.getTestClass().getRealClass().getField("driver").get(result.getThrowable());
+			driver = (WebDriver)result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
