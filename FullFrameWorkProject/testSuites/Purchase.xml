@@ -8,13 +8,13 @@
 	</groups>	
   <test thread-count="1" name="Submit Order Test">
     <classes>
-      <class name="com.selenium.learning.testProject.SubmitOrderTest"/>
+      <class name="com.learning.selenium.testProject.SubmitOrderTest"/>
         </classes>
    </test> <!-- Test -->
    
    <test parallel="methods" thread-count="1" name="Error Validation Test">
 	 <classes>   
-      	<class name="com.selenium.learning.testProject.ErrorValidationTest"/>
+      	<class name="com.learning.selenium.testProject.ErrorValidationTest"/>
   	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
