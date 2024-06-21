@@ -1,4 +1,4 @@
-package com.learning.selenium.testProject;
+package com.learning.selenium.testproject;
 
 import java.time.Duration;
 import java.util.List;

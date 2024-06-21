@@ -1,4 +1,4 @@
-package com.learning.selenium.testProject;
+package com.learning.selenium.testproject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import com.learning.pageObjects.CheckOutPage;
 import com.learning.pageObjects.ConfirmationPage;
 import com.learning.pageObjects.OrderPage;
 import com.learning.pageObjects.ProductCatalog;
-import com.learning.selenium.testComponents.BaseTest;
+import com.learning.selenium.testcomponents.BaseTest;
 
 public class SubmitOrderTest extends BaseTest{
 

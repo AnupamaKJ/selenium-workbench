@@ -28,3 +28,8 @@ select on the project folder --> cmd to run --> mvn test -P(id)
 mvn test -PRegression(id) -DBrowser=firefox
 
 mvn test -PRegression -Dbrowser=firefox
+
+#### Basic git commands ####
+https://confluence.atlassian.com/bitbucketserver071/basic-git-commands-998653319.html
+
+

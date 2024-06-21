@@ -1,4 +1,4 @@
-package com.learning.selenium.testComponents;
+package com.learning.selenium.testcomponents;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package com.learning.selenium.testProject;
+package com.learning.selenium.testproject;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 
 import com.learning.pageObjects.CartPage;
 import com.learning.pageObjects.ProductCatalog;
-import com.learning.selenium.testComponents.BaseTest;
-import com.learning.selenium.testComponents.Retry;
+import com.learning.selenium.testcomponents.BaseTest;
+import com.learning.selenium.testcomponents.Retry;
 
 public class ErrorValidationTest extends BaseTest{
 
