@@ -32,4 +32,11 @@ mvn test -PRegression -Dbrowser=firefox
 #### Basic git commands ####
 https://confluence.atlassian.com/bitbucketserver071/basic-git-commands-998653319.html
 
+#### Integrating Test Automation in CI/CD ####
+Continuous integration , Continuous delivery
+
+![CI_CD_Architecture.PNG](./Images/CI_CD_Architecture.PNG)
+
+to start jenkins
+java -jar jenkins.war -httpPort=8080
 
