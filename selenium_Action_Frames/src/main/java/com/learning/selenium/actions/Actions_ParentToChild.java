@@ -1,4 +1,4 @@
-package com.selenium.learning.Actions;
+package com.learning.selenium.actions;
 
 import java.time.Duration;
 import java.util.Iterator;

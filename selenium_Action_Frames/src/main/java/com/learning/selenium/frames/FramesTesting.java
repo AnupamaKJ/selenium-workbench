@@ -1,4 +1,4 @@
-package com.selenium.learning.Frames;
+package com.learning.selenium.frames;
 
 import java.time.Duration;
 

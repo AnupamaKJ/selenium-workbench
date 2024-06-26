@@ -1,13 +1,10 @@
-package com.selenium.learning.miscellaneous;
+package com.learning.selenium.miscellaneous;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

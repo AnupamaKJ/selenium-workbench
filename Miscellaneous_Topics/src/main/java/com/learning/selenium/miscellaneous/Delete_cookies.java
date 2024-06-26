@@ -1,4 +1,4 @@
-package com.selenium.learning.miscellaneous;
+package com.learning.selenium.miscellaneous;
 
 import java.time.Duration;
 
