@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>selenium_locator</artifactId>
+    <artifactId>Miscellaneous_Topics</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
