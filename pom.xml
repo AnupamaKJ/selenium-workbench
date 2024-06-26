@@ -13,6 +13,8 @@
         <module>selenium_Alert</module>
         <module>selenium_dropDowns</module>
         <module>FullFrameWorkProject</module>
+        <module>Selenium_ExcelDriven</module>
+        <module>selenium_ecommerce</module>
     </modules>
 
     <properties>

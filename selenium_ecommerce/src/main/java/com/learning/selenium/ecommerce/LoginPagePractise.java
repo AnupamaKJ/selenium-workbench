@@ -1,4 +1,4 @@
-package com.selenium.learning.ecommerce;
+package com.learning.selenium.ecommerce;
 
 import java.time.Duration;
 import java.util.List;
