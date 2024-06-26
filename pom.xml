@@ -19,6 +19,8 @@
         <module>selenium_Action_Frames</module>
         <module>Miscellaneous_Topics</module>
         <module>selenium_Action_Frames</module>
+        <module>Selenium_ExcelDriven</module>
+        <module>Miscellaneous_Topics</module>
     </modules>
 
     <properties>
