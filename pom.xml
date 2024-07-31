@@ -25,6 +25,7 @@
         <module>selenium_scrollBar</module>
         <module>selenium_TestNGTutorial</module>
         <module>selenium_windows</module>
+        <module>selenium_dataDriven</module>
     </modules>
 
     <properties>
