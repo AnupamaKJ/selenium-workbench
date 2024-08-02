@@ -26,10 +26,11 @@
         <module>selenium_TestNGTutorial</module>
         <module>selenium_windows</module>
         <module>selenium_dataDriven</module>
+        <module>selenium_uploadDownload</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.sourDoce>17</maven.compiler.sourDoce>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <apache.poi.version>5.2.5</apache.poi.version>
@@ -46,7 +47,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.18.1</version>
+            <version>4.23.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
